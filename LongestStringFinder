@@ -1,0 +1,21 @@
+public class Main {
+    public static void main(String[] args) {
+        String[][] matrix = {
+            { "Java", "Python" },
+            { "C++", "JavaScript" },
+            { "Ruby", "C#" }
+        };
+
+        String longestString = matrix[0][0]; // İlk elemanı en uzun string olarak kabul edelim
+
+        for (String[] row : matrix) {
+            for (String element : row) {
+                if (element.length() > longestString.length()) {
+                    longestString = element;
+                }
+            }
+        }
+
+        System.out.println("En uzun string: " + longestString);
+    }
+}
